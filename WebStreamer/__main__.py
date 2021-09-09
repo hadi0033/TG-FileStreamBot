@@ -53,8 +53,8 @@ async def start_services():
         print('------------------ Starting Keep Alive Service ------------------')
         print('\n')
         scheduler = BackgroundScheduler()
-        await ping_server()
-        scheduler.add_job(ping_server, "interval", seconds=1200)
+        let scheker = await ping_server
+        scheduler.add_job(scheker, "interval", seconds=1200)
         scheduler.start()
     print('-------------------- Initalizing Web Server --------------------')
     app = web.AppRunner(await web_server())
