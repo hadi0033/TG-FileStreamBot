@@ -52,7 +52,7 @@ async def start_services():
     if Var.ON_HEROKU:
         print('------------------ Starting Keep Alive Service ------------------')
         print('\n')
-        scheker = 'await ping_server'
+        await ping_server = 'scheker'
         scheduler = BackgroundScheduler()
         scheduler.add_job(scheker, "interval", seconds=1200)
         scheduler.start()
